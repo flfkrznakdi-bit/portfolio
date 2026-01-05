@@ -235,7 +235,7 @@
         display: block;
         margin: 0 auto;
         padding-left: 0;
-        width: 800px;
+        width: 600px;
         padding: 0;
     }
 
@@ -424,6 +424,10 @@
 
     .section9 .box-wrap .text p {
         font-size: 1.8rem;
+    }
+
+    .section12 .left img {
+        width: 100vh;
     }
 
     .section14>p:nth-child(2) {
@@ -701,15 +705,17 @@
 
     .section12 {
         height: 150vh;
+        overflow: hidden;
     }
 
-    .section12 .left img {
-        height: 90vh;
+     .section12 .left img {
+        width: 60vh;
+        height: 60vh;
     }
 
     .section12 .right {
         position: relative;
-        height: 100px;
+        height: 400px;
     }
 
     .section13 {
@@ -1034,7 +1040,7 @@
     }
 
     .section12 .left img {
-        height: 45vh;
+       
     }
 
     .section12 .right .right-inner {
@@ -1091,7 +1097,7 @@
         padding-right: 1rem;
     }
 
-    .section14 img {
+    .section14 .info img {
         width: 8px;
         height: 8px;
         margin-bottom: 1px;
@@ -1536,10 +1542,6 @@
     section {
         max-width: 100%;
         overflow-x: hidden;
-    }
-
-    section .blink span:nth-child(1) {
-        left: 0;
     }
 
     .section1 .unlock {
@@ -1988,11 +1990,12 @@
     }
 
     .section12 .right {
-        bottom: 0;
+        bottom: 100px;
     }
 
     .section12 .left img {
-        height: 300px;
+        width: 40vh;
+       height: 40vh;
     }
 
     .section12 .right h2 {
