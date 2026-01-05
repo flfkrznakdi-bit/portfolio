@@ -3,7 +3,7 @@
 @media screen and (max-width : 1840px) {
     section {
         max-width: 100%;
-    overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -261,7 +261,7 @@
 @media screen and (max-width : 1300px) {
     section {
         max-width: 100%;
-    overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -441,7 +441,7 @@
 
 @media screen and (max-width : 1024px) {
     section {
-         max-width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -1101,7 +1101,7 @@
 
 @media screen and (max-width : 480px) {
     section {
-         max-width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -1536,6 +1536,10 @@
     section {
         max-width: 100%;
         overflow-x: hidden;
+    }
+
+    section .blink span:nth-child(1) {
+        left: 0;
     }
 
     .section1 .unlock {

@@ -1446,6 +1446,7 @@ section .blink span:nth-child(4) {
 
 .section12 .left img {
     height: 120vh;
+    position: relative;
 }
 
 .section12 .right {
@@ -1506,6 +1507,7 @@ section .blink span:nth-child(4) {
 .section13 .left {
     height: 100vh;
     width: 50%;
+    position: relative;
 }
 
 .section13 .left img {
