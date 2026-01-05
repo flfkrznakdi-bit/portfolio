@@ -1,0 +1,1626 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'mileheights';
+    src: url(../fonts/Mile-Heights-Font/mileheights-freepersonaluse.otf);
+}
+
+@font-face {
+    font-family: 'HsBombaram30';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HsBombaram30';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0; left: -100vw;
+    background-color: #222;
+    padding: 20vh 10vw; 
+    /* 뷰포트에 있는 width height */
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+    transition: all .5s;
+}
+
+section {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    position: relative;
+    font-family: 'HsBombaram30';
+}
+
+section .stroke {
+    border: 1px solid white;
+    width: 95%;
+    height: 90vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .unlock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22rem;
+    font-family: 'mileheights';
+    letter-spacing: 1.5rem;
+    animation: unlock 2s 0.8s linear forwards;
+    padding-left: 1.5rem;
+}
+
+section .welcome {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    font-size: 18rem;
+    font-family: 'mileheights';
+    letter-spacing: 1.5rem;
+    z-index: 99;
+    animation: welcome 2s 0.8s linear forwards;
+    opacity: 0;
+    padding-left: 1.5rem;
+}
+
+section .key {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .key img {
+    animation: key 2s 0.8s linear forwards;
+}
+
+@keyframes unlock {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes key {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes welcome {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* section2 */
+
+.section2 {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background: black no-repeat center/cover;
+}
+
+.section2 h2 {
+    font-size: 2.1rem;
+    display: inline-block;
+    background-color: black;
+    padding-top: 2rem;
+}
+
+.section2>p {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    font-family: 'Pretendard';
+}
+
+.section2 .floor-wrap {
+    padding-top: 5rem;
+}
+
+.section2 .floor {
+    padding-top: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.section2 .floor span {
+    position: relative;
+    transition: all .2s;
+}
+
+.section2 .floor .button-wrap {
+    width: 33rem;
+    border: 3px solid white;
+    position: relative;
+    border-radius: 4rem;
+    background-color: white;
+    transition: all .5s;
+}
+
+.section2 .floor .button-wrap .button {
+    width: 31.5rem;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white;
+    padding: 2rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    transition: all .5s;
+}
+
+.section2 .floor .button-wrap .button p {
+    font-size: 2rem;
+}
+
+.section2 .floor .button-wrap .button p:nth-child(2n+1) {
+    background: url(../images/star.png) no-repeat center/contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+.section2 .floor:hover .button p:nth-child(2n+1) {
+    background: url(../images/star2.png) no-repeat center/contain;
+}
+
+.section2 .floor:hover .button-wrap {
+    background-color: white;
+}
+
+.section2 .floor:hover .button-wrap .button {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+}
+
+.section2 .floor-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section2 .floor span:nth-child(1) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    width: 15rem;
+    height: 6.6rem;
+}
+
+/* floor1 */
+
+.section2 .floor1 span:nth-child(1):after {
+    content: '3F';
+    position: absolute;
+    left: 50%;
+    bottom: 1.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+}
+
+.section2 .floor1 span:nth-child(2):after {
+    content: 'CODING';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+}
+
+
+/* floor2 */
+
+.section2 .floor2 span:nth-child(2):after {
+    content: 'DESGIN';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+}
+
+
+.section2 .floor2 span:nth-child(1):after {
+    content: '2F';
+    position: absolute;
+    left: 50%;
+    bottom: 1.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+}
+
+.section2 .floor2 span:nth-child(2):hover {
+    background: url(../images/floor-frame2.png) no-repeat center/contain;
+    color: black;
+}
+
+
+/* floor3 */
+
+.section2 .floor3 span:nth-child(1):after {
+    content: '1F';
+    position: absolute;
+    left: 50%;
+    bottom: 1.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+}
+
+.section2 .floor3 span:nth-child(2):after {
+    content: 'ABOUT Dayé';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+}
+
+.section2 .floor:hover span:nth-child(1) {
+    background: url(../images/floor-key.png) no-repeat center/contain;
+    color: transparent;
+}
+
+/* section3 */
+
+.section3 {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg3.png) no-repeat center/cover;
+    position: relative;
+}
+
+.section3 .section3-1 {
+    margin-top: 3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+
+.section3 .section3-1 .button-wrap {
+    width: 33rem;
+    border: 3px solid white;
+    position: relative;
+    border-radius: 4rem;
+    background-color: white;
+    transition: all .5s;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section3 .section3-1 .button-wrap .button {
+    width: 31.5rem;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white;
+    padding: 2rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+.section3 .section3-1 .button-wrap .button p {
+    font-size: 2rem;
+}
+
+.section3 .section3-1 .button-wrap .button p:nth-child(2n+1) {
+    background: url(../images/star.png) no-repeat center/contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+.section3 .elevator {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    width: 20%;
+}
+
+.section3 .elevator p {
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 4.6rem;
+}
+
+.section3 .elevator p:nth-child(1) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+    z-index: 999;
+}
+
+.section3 .elevator p:nth-child(1):after {
+    content: '3F';
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section3 .elevator p:nth-child(2) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    transition: all .2s;
+    z-index: 99;
+}
+
+.section3 .elevator p:nth-child(2):after {
+    content: '2F';
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section3 .elevator p:nth-child(3) {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+}
+
+.section3 .elevator p:nth-child(3):after {
+    content: '1F';
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: black;
+}
+
+.section3 .elevator p:nth-child(1):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section3 .elevator p:nth-child(1):hover:after {
+    color: black;
+}
+
+.section3 .elevator p:nth-child(2):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section3 .elevator p:nth-child(2):hover:after {
+    color: black;
+}
+
+.section3 .subtitle {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.section3 .contents {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.section3 .contents .left {
+    height: 30rem;
+    position: relative;
+    width: 50%;
+}
+
+.section3 .contents .left .pic {
+    background: url(../images/profile.jpg) no-repeat center/contain;
+    width: 27rem;
+    height: 36rem;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+}
+
+.section3 .contents .right {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+.section3 .contents .right .inner h1 {
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.section3 .contents .right .inner .info {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Pretendard';
+    line-height: 1.5;
+}
+
+.section3 .contents .right .inner .info1>p:nth-child(1) {
+    width: 70px;
+
+}
+
+.section3 .contents .right .inner .info>p:nth-child(1) {
+    font-weight: 700;
+}
+
+.section3 .contents .right .inner .info2>p:nth-child(1) {
+    width: 180px;
+}
+
+
+/* section4 */
+
+.section4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black no-repeat center/cover;
+}
+
+.section4 .section4-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.section4 .elevator {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    width: 20%;
+}
+
+.section4 .elevator p {
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 4.6rem;
+}
+
+.section4 .elevator p:nth-child(1) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+    z-index: 999;
+}
+
+.section4 .elevator p:nth-child(1):after {
+    content: '3F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section4 .elevator p:nth-child(2) {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+}
+
+.section4 .elevator p:nth-child(2):after {
+    content: '2F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: black;
+}
+
+.section4 .elevator p:nth-child(3) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    transition: all .2s;
+}
+
+.section4 .elevator p:nth-child(3):after {
+    content: '1F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section4 .elevator p:nth-child(1):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section4 .elevator p:nth-child(1):hover:after {
+    color: black;
+}
+
+.section4 .elevator p:nth-child(3):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section4 .elevator p:nth-child(3):hover:after {
+    color: black;
+}
+
+.section4 .title {
+    background: url(../images/floor-frame.png) no-repeat center/contain;
+    width: 37.5rem;
+    height: 6.6rem;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    top: 0;
+}
+
+.section4 .title:after {
+    content: 'CODING';
+    position: absolute;
+    left: 50%;
+    top: 1.7rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.section4 .box-wrap .box>p {
+    background: url(../images/door.png) no-repeat center/contain;
+    width: 432px;
+    height: 457px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.section4 .box-wrap .box>p:hover {
+    background: url(../images/door2.png) no-repeat center/contain;
+}
+
+.section4 .box-wrap {
+    display: flex;
+    gap: 15rem;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.section4 .box-wrap .box1 img,
+.section4 .box-wrap .box2 img {
+    cursor: pointer;
+}
+
+.section4 .box-wrap .text {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+    width: 20rem;
+}
+
+.section4 .box-wrap .text p {
+    font-size: 2rem;
+}
+
+.section4 .section4-1 .button-wrap {
+    width: 33rem;
+    border: 3px solid white;
+    position: relative;
+    border-radius: 4rem;
+    background-color: white;
+    transition: all .5s;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section4 .section4-1 .button-wrap .button {
+    width: 31.5rem;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white;
+    padding: 2rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+.section4 .section4-1 .button-wrap .button p {
+    font-size: 2rem;
+}
+
+.section4 .section4-1 .button-wrap .button p:nth-child(2n+1) {
+    background: url(../images/star.png) no-repeat center/contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* section5 */
+
+.section5 {
+    background: url(../images/bg6.png) no-repeat center/cover;
+}
+
+.section5 .coding .section5-1 {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.section5 .coding .left {
+    height: 100%;
+}
+
+.section5-1 .left img {
+    height: 800px;
+    padding-left: 5rem;
+    position: relative;
+    z-index: 99;
+}
+
+
+.section5-1 .right {
+    text-align: center;
+}
+
+.section5 .coding .right h2 {
+    font-size: 4rem;
+}
+
+.section5 .coding .right .sub {
+    padding: 2rem 0;
+}
+
+.section5 .coding .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+section .coding .right button {
+    margin-top: 5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: 'HsBombaram30';
+}
+
+section .coding .right button:hover {
+    color: black;
+    background-color: white;
+}
+
+.section5 .coding h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section5 .coding .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* section6 */
+.section6 {
+    background: url(../images/bg6.png) no-repeat center/cover;
+}
+
+.section6 .coding .section5-1 {
+    display: flex;
+    align-items: center;
+}
+
+.section6 .coding .left {
+    width: 50%;
+    height: 100%;
+}
+
+.section6 .coding .left img {
+    height: 800px;
+}
+
+.section6 .coding .right {
+    text-align: center;
+}
+
+.section6 .coding .right h2 {
+    font-size: 4rem;
+}
+
+.section6 .coding .right .sub {
+    padding: 2rem 0;
+}
+
+.section6 .coding .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section6 .coding h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section6 .coding .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* section7 */
+.section7 {
+    background: url(../images/bg6.png) no-repeat center/cover;
+}
+
+.section7 .coding .section5-1 {
+    display: flex;
+    align-items: center;
+}
+
+.section7 .coding .left {
+    width: 50%;
+    height: 100%;
+}
+
+.section7 .coding .left img {
+    height: 800px;
+}
+
+.section7 .coding .right {
+    text-align: center;
+}
+
+.section7 .coding .right h2 {
+    font-size: 4rem;
+}
+
+.section7 .coding .right .sub {
+    padding: 2rem 0;
+}
+
+.section7 .coding .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section7 .coding .right button {
+    margin-left: 2rem;
+}
+
+.section7 .coding h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section7 .coding .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* section8 */
+.section8 {
+    background: url(../images/bg6.png) no-repeat center/cover;
+}
+
+.section8 .coding .section5-1 {
+    display: flex;
+    align-items: center;
+}
+
+.section8 .coding .left {
+    width: 50%;
+    height: 100%;
+}
+
+.section8 .coding .left img {
+    height: 800px;
+}
+
+.section8 .coding .right {
+    text-align: center;
+}
+
+.section8 .coding .right h2 {
+    font-size: 4rem;
+}
+
+.section8 .coding .right .sub {
+    padding: 2rem 0;
+}
+
+.section8 .coding .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section8 .coding .right button {
+    margin-left: 2rem;
+}
+
+.section8 .coding h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section8 .coding .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* section9 */
+.section9 {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+}
+
+.section9 .box-wrap .box>p {
+    background: url(../images/door.png) no-repeat center/contain;
+    width: 432px;
+    height: 457px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.section9 .box-wrap .box>p:hover {
+    background: url(../images/door2.png) no-repeat center/contain;
+}
+
+.section9 .section4-1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.section9 .elevator {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    width: 20%;
+}
+
+.section9 .elevator p {
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 4.6rem;
+}
+
+.section9 .elevator p:nth-child(1) {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+}
+
+.section9 .elevator p:nth-child(1):after {
+    content: '3F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: black;
+}
+
+.section9 .elevator p:nth-child(2) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    transition: all .2s;
+}
+
+.section9 .elevator p:nth-child(2):after {
+    content: '2F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section9 .elevator p:nth-child(3) {
+    background: url(../images/floor.png) no-repeat center/contain;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    transition: all .2s;
+}
+
+.section9 .elevator p:nth-child(3):after {
+    content: '1F';
+    position: absolute;
+    left: 50%;
+    bottom: 0.8rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'HsBombaram30';
+    color: white;
+}
+
+.section9 .elevator p:nth-child(2):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section9 .elevator p:nth-child(2):hover:after {
+    color: black;
+}
+
+.section9 .elevator p:nth-child(3):hover {
+    background: url(../images/floor-white.png) no-repeat center/contain;
+}
+
+.section9 .elevator p:nth-child(3):hover:after {
+    color: black;
+}
+
+.section9 .title {
+    background: url(../images/floor-frame.png) no-repeat center/contain;
+    width: 37.5rem;
+    height: 6.6rem;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    top: 0;
+}
+
+.section9 .box-wrap1 {
+    display: flex;
+    gap: 15rem;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.section9 .box-wrap2 {
+    display: flex;
+    gap: 15rem;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.section9 .box-wrap img,
+.section9 .box-wrap img {
+    cursor: pointer;
+}
+
+.section9 .box-wrap .text {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+    width: 20rem;
+}
+
+.section9 .box-wrap .text p {
+    font-size: 2rem;
+}
+
+.section9 .section4-1 .button-wrap {
+    width: 33rem;
+    border: 3px solid white;
+    position: relative;
+    border-radius: 4rem;
+    background-color: white;
+    transition: all .5s;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section9 .section4-1 .button-wrap .button {
+    width: 31.5rem;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white;
+    padding: 2rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+.section9 .section4-1 .button-wrap .button p {
+    font-size: 2rem;
+}
+
+.section9 .section4-1 .button-wrap .button p:nth-child(2n+1) {
+    background: url(../images/star.png) no-repeat center/contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* 반짝이 */
+section .blink span:nth-child(1) {
+    position: absolute;
+    top: 8rem;
+    left: 25rem;
+    animation: blink 1.3s linear infinite alternate;
+}
+
+section .blink span:nth-child(2) {
+    position: absolute;
+    bottom: 22rem;
+    left: 4rem;
+    animation: blink2 1.5s linear infinite alternate;
+}
+
+section .blink span:nth-child(3) {
+    position: absolute;
+    bottom: 15rem;
+    right: 20rem;
+    animation: blink2 1.7s linear infinite alternate;
+}
+
+section .blink span:nth-child(4) {
+    position: absolute;
+    top: 3rem;
+    right: 10rem;
+    animation: blink 1.2s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink2 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/* section10 */
+
+
+.section10 {
+    background: url(../images/bg5.png);
+}
+
+.section10 .section10-1 {
+    display: flex;
+    align-items: center;
+}
+
+.section10 .left {
+    width: 50%;
+    height: 100%;
+    padding-left: 5rem;
+}
+
+.section10 .left img {
+    height: 700px;
+    position: relative;
+    z-index: 99;
+}
+
+.section10 .right {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+.section10 .right .right-inner {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section10 .right h2 {
+    font-size: 4rem;
+}
+
+.section10 .right .sub {
+    padding: 2rem 0;
+}
+
+.section10 .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section10 h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section10 .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* section11 */
+.section11 {
+    overflow: hidden;
+    background: url(../images/bg5.png) no-repeat center/cover;
+}
+
+.section11 .section10-1 {
+    display: flex;
+    align-items: center;
+}
+
+.section11 .left {
+    height: 100%;
+    width: 50%;
+}
+
+.section11 .left img {
+    height: 400px;
+    transform: rotate(30deg);
+}
+
+.section11 .left img:nth-child(1) {
+    position: absolute;
+    top: 100px;
+    left: 230px;
+}
+
+.section11 .left img:nth-child(2) {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+}
+
+.section11 .right {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+.section11 .right .right-inner {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section11 .right h2 {
+    font-size: 4rem;
+}
+
+.section11 .right .sub {
+    padding: 2rem 0;
+}
+
+.section11 .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section11 h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section11 .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* section12 */
+
+.section12 {
+    overflow: hidden;
+    background: url(../images/bg5.png) no-repeat center/cover;
+    padding: 0;
+}
+
+.section12 .section10-1 {
+    display: flex;
+}
+
+.section12 .left {
+    height: 100vh;
+    width: 50%;
+}
+
+.section12 .left img {
+    height: 120vh;
+}
+
+.section12 .right {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    width: 50%;
+}
+
+.section12 .right .right-inner {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section12 .right h2 {
+    font-size: 4rem;
+}
+
+.section12 .right .sub {
+    padding: 2rem 0;
+}
+
+.section12 .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section12 h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section12 .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* section13 */
+.section13 {
+    background: url(../images/bg5.png) no-repeat center/cover;
+}
+
+.section13 .section10-1 {
+    display: flex;
+}
+
+.section13 .left {
+    height: 100vh;
+    width: 50%;
+}
+
+.section13 .left img {
+    padding: 7rem 0 0 50px;
+    width: 100%;
+}
+
+.section13 .right {
+    text-align: center;
+    position: relative;
+    width: 50%;
+}
+
+.section13 .right .right-inner {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section13 .right h2 {
+    font-size: 4rem;
+}
+
+.section13 .right .sub {
+    padding: 2rem 0;
+}
+
+.section13 .right p:nth-child(4) {
+    font-family: 'Pretendard';
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.section13 h3 {
+    font-size: 3rem;
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.section13 .sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* right-button */
+.section10-1 .right button {
+    margin-top: 5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all .3s;
+    margin-left: 2rem;
+    font-family: 'HsBombaram30';
+}
+
+.section10-1 .right button:hover {
+    color: black;
+    background-color: white;
+}
+
+/* section14 */
+
+.section14 {
+    font-family: 'mileheights';
+}
+
+.section14 p:nth-child(2) {
+    font-size: 15rem;
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.section14 p:nth-child(3) {
+    font-size: 10rem;
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.section14 .info {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+}
+
+.section14 .info p {
+    font-family: 'pretendard';
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 5rem;
+    line-height: 1.5;
+}
+
+.section14 a {
+    font-family: 'pretendard';
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: right;
+    display: block;
+    padding-right: 5rem;
+}
+
+.section14 img {
+    width: 15px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
