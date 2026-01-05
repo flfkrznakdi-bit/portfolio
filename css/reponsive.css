@@ -708,7 +708,7 @@
         overflow: hidden;
     }
 
-     .section12 .left img {
+    .section12 .left img {
         width: 60vh;
         height: 60vh;
     }
@@ -1037,10 +1037,6 @@
 
     .section12 .right p:nth-child(4) {
         font-size: 14px;
-    }
-
-    .section12 .left img {
-       
     }
 
     .section12 .right .right-inner {
@@ -1538,22 +1534,18 @@
 
 }
 
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 430px) {
     section {
         max-width: 100%;
         overflow-x: hidden;
     }
 
     .section1 .unlock {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .section1 .welcome {
-        font-size: 22px;
-    }
-
-    .section1 .key img {
-        width: 250px;
+        font-size: 2rem;
     }
 
     .section2 {
@@ -1995,7 +1987,7 @@
 
     .section12 .left img {
         width: 40vh;
-       height: 40vh;
+        height: 40vh;
     }
 
     .section12 .right h2 {
@@ -2046,4 +2038,25 @@
     .section14 {
         height: 50vh;
     }
+}
+
+
+@media screen and (max-width : 375px) {
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .section1 .unlock {
+        font-size: 2rem;
+    }
+
+    .section1 .welcome {
+        font-size: 22px;
+    }
+
+    .section1 .key img {
+        width: 250px;
+    }
+
 }
