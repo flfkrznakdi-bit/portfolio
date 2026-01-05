@@ -2,7 +2,8 @@
 
 @media screen and (max-width : 1840px) {
     section {
-        max-width: 1840px;
+        max-width: 100%;
+    overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -259,7 +260,8 @@
 
 @media screen and (max-width : 1300px) {
     section {
-        max-width: 1300px;
+        max-width: 100%;
+    overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -432,14 +434,15 @@
         font-size: 3rem;
     }
 
-    .section14 > a {
+    .section14>a {
         font-size: 3rem;
     }
 }
 
 @media screen and (max-width : 1024px) {
     section {
-        max-width: 1024px;
+         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -721,7 +724,8 @@
 
 @media screen and (max-width : 767px) {
     section {
-        max-width: 767px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     /* section1 */
@@ -1073,7 +1077,7 @@
         padding-right: 1rem;
     }
 
-    .section14 > p:nth-child(3) {
+    .section14>p:nth-child(3) {
         padding-right: 1rem;
     }
 
@@ -1097,7 +1101,8 @@
 
 @media screen and (max-width : 480px) {
     section {
-        max-width: 480px;
+         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .section1 .unlock {
@@ -1529,7 +1534,8 @@
 
 @media screen and (max-width : 375px) {
     section {
-        max-width: 375px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .section1 .unlock {
