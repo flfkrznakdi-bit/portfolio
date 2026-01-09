@@ -1,0 +1,14 @@
+@media screen and (max-width : 900px) {
+
+    button {
+        bottom: 50px;
+    }
+
+    .daye2 .btn-next {
+        right: 20px;
+    }
+
+    .daye2 .btn-prev {
+        left: 80px;
+    }
+}

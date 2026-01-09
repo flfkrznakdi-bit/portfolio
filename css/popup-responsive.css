@@ -1,0 +1,51 @@
+@media screen and (max-width : 900px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h1::after {
+        border: 2px solid black;
+        width: 10px;
+        height: 10px;
+        left: 18%;
+        top: 40px;
+    }
+
+    h1::before {
+        border: 2px solid black;
+        width: 20px;
+        height: 20px;
+        left: 15%;
+        top: 45px;
+    }
+
+    p::after {
+        width: 10px;
+        height: 10px;
+        right: 18%;
+        top: 70px;
+        border: 2px solid black;
+    }
+
+      p::before {
+        width: 20px;
+        height: 20px;
+        right: 15%;
+        top: 55px;
+        border: 2px solid black;
+    }
+    .main img {
+        width: 300px;
+    }
+    button {
+        bottom: 50px;
+    }
+
+    .daye .btn-next {
+        right: 20px;
+    }
+
+    .daye .btn-prev {
+        left: 100px;
+    }
+}

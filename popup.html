@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'funkycatch';
+            src: url(./fonts/funky_catch/Funky\ Catch.otf);
+        }
+
+        body {
+            background: url(./images/파스텔체크.jpg) no-repeat center/cover;
+        }
+
+        h1 {
+            font-family: 'funkycatch';
+            color: white;
+            -webkit-text-stroke: 1px #000;
+            font-size: 64px;
+            text-align: center;
+            position: relative;
+            margin: 80px 0;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        h1::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 3px solid black;
+            position: absolute;
+            top: 50px;
+            left: 25%;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        h1::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 3px solid black;
+            position: absolute;
+            top: 55px;
+            left: 22.5%;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        p::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 3px solid black;
+            position: absolute;
+            top: 50px;
+            right: 27%;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        p::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 3px solid black;
+            position: absolute;
+            top: 30px;
+            right: 24.5%;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .main img {
+            width: 350px;
+        }
+
+        button {
+            font-family: 'funkycatch';
+            width: 100px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: white;
+            cursor: pointer;
+            transition: all .5s;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        figure img {
+            width: 550px;
+        }
+
+        .daye {
+            position: relative;
+        }
+
+        .daye .btn-next {
+            color: white;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 28%;
+            top: 50%;
+            transform: translate(-50%);
+            font-family: 'funkycatch';
+            font-size: 50px;
+            z-index: 999;
+            cursor: pointer;
+            -webkit-text-stroke: 2px #000;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .daye .btn-prev {
+            color: white;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 30%;
+            top: 50%;
+            transform: translate(-50%);
+            font-family: 'funkycatch';
+            font-size: 50px;
+            z-index: 999;
+            cursor: pointer;
+            -webkit-text-stroke: 2px #000;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/popup-responsive.css">
+</head>
+
+<body>
+    <h1>1081 PHONECASE MARKET</h1>
+    <p></p>
+
+    <div class="swiper daye">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <figure class="main"><img src="images/insta.png" alt="insta"></figure>
+            </div>
+            <div class="swiper-slide">
+                <figure><img src="images/cardnews1.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide">
+                <figure><img src="images/cardnews2.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide">
+                <figure><img src="images/cardnews3.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide">
+                <figure><img src="images/cardnews4.png" alt=""></figure>
+            </div>
+            <div class="swiper-slide">
+                <figure><img src="images/cardnews5.png" alt=""></figure>
+            </div>
+        </div>
+        <div class="btn-next">></div>
+        <div class="btn-prev">&lt;</div>
+    </div>
+    <button onclick="window.close()">close</button>
+
+    <script>
+        var swiper = new Swiper(".daye", {
+            navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+            },
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
