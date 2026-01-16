@@ -11,6 +11,16 @@
             src: url(./fonts/funky_catch/Funky\ Catch.otf);
         }
 
+        h1 {
+            font-family: 'funkycatch';
+            color: #F4E1D9;
+            -webkit-text-stroke: 1px #000;
+            font-size: 64px;
+            text-align: center;
+            position: relative;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
         figure img {
             width: 500px;
         }
@@ -29,6 +39,11 @@
             cursor: pointer;
             -webkit-text-stroke: 2px #000;
             text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all .5s;
+        }
+
+        .daye2 .btn-next:hover {
+            color: #F4E1D9;
         }
 
         .daye2 .btn-prev {
@@ -45,6 +60,11 @@
             cursor: pointer;
             -webkit-text-stroke: 2px #000;
             text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all .5s;
+        }
+
+        .daye2 .btn-prev:hover {
+            color: #F4E1D9;
         }
 
         figure {
@@ -70,8 +90,7 @@
         }
 
         button:hover {
-            background-color: black;
-            color: white;
+            background-color: #F4E1D9;
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
@@ -80,6 +99,8 @@
 </head>
 
 <body>
+    <h1>clinique</h1>
+    <p></p>
     <div class="swiper daye2">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
